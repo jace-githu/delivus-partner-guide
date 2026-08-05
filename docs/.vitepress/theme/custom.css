@@ -1,0 +1,93 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+
+:root {
+  --vp-font-family-base: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+
+  --vp-c-brand-1: #1d4ed8;
+  --vp-c-brand-2: #2563eb;
+  --vp-c-brand-3: #3b82f6;
+  --vp-c-brand-soft: rgba(37, 99, 235, 0.1);
+
+  --dg-ink: #0f172a;
+  --dg-muted: #64748b;
+  --dg-line: #e2e8f0;
+  --dg-card-bg: #ffffff;
+  --dg-card-hover: #f8fafc;
+}
+
+.dark {
+  --vp-c-brand-1: #93b4f8;
+  --vp-c-brand-2: #7fa0ec;
+  --vp-c-brand-3: #6494e8;
+  --vp-c-brand-soft: rgba(120, 160, 236, 0.16);
+
+  --dg-ink: #e2e8f0;
+  --dg-muted: #94a3b8;
+  --dg-line: #293548;
+  --dg-card-bg: #161f2e;
+  --dg-card-hover: #1b2637;
+}
+
+.dg-home { max-width: 960px; margin: 0 auto; padding: 0 24px 96px; }
+.dg-hero { padding: 88px 0 64px; border-bottom: 1px solid var(--dg-line); }
+.dg-eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: var(--vp-c-brand-1); margin: 0 0 14px; }
+.dg-title { font-size: 44px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.15; color: var(--dg-ink); margin: 0 0 14px; }
+.dg-sub { font-size: 17px; color: var(--dg-muted); margin: 0 0 32px; }
+.dg-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.dg-btn {
+  display: inline-flex; align-items: center; height: 44px; padding: 0 22px;
+  border-radius: 10px; font-size: 15px; font-weight: 600; text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+.dg-btn-primary { background: var(--vp-c-brand-1); color: #fff; }
+.dg-btn-primary:hover { background: var(--vp-c-brand-2); }
+.dg-btn-ghost { border: 1px solid var(--dg-line); color: var(--dg-ink); }
+.dg-btn-ghost:hover { border-color: var(--vp-c-brand-3); color: var(--vp-c-brand-1); }
+
+.dg-section { padding-top: 56px; }
+.dg-section-title {
+  font-size: 15px; font-weight: 700; letter-spacing: 0.02em;
+  color: var(--dg-muted); margin: 0 0 18px; border: none; padding: 0;
+}
+
+.dg-featured { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.dg-feature-card {
+  display: flex; flex-direction: column; gap: 6px; padding: 26px 26px 24px;
+  border: 1px solid var(--dg-line); border-radius: 14px; background: var(--dg-card-bg);
+  text-decoration: none; transition: border-color 0.15s, background 0.15s;
+}
+.dg-feature-card:hover { border-color: var(--vp-c-brand-3); background: var(--dg-card-hover); }
+.dg-feature-tag { font-size: 12px; font-weight: 600; color: var(--vp-c-brand-1); margin-bottom: 2px; }
+.dg-feature-title { font-size: 18px; font-weight: 700; color: var(--dg-ink); letter-spacing: -0.01em; }
+.dg-feature-desc { font-size: 14px; color: var(--dg-muted); }
+
+.dg-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.dg-card {
+  display: flex; flex-direction: column; padding: 24px 26px 22px;
+  border: 1px solid var(--dg-line); border-radius: 14px; background: var(--dg-card-bg);
+  text-decoration: none; transition: border-color 0.15s, background 0.15s;
+}
+.dg-card:hover { border-color: var(--vp-c-brand-3); background: var(--dg-card-hover); }
+.dg-card-icon {
+  width: 38px; height: 38px; display: flex; align-items: center; justify-content: center;
+  border-radius: 10px; background: var(--vp-c-brand-soft); color: var(--vp-c-brand-1); margin-bottom: 14px;
+}
+.dg-card-icon svg { width: 20px; height: 20px; }
+.dg-card-title { font-size: 16px; font-weight: 700; color: var(--dg-ink); margin-bottom: 4px; }
+.dg-card-desc { font-size: 14px; color: var(--dg-muted); margin-bottom: 12px; }
+.dg-card-count { font-size: 12px; font-weight: 500; color: var(--dg-muted); opacity: 0.75; }
+
+@media (max-width: 640px) {
+  .dg-hero { padding: 56px 0 44px; }
+  .dg-title { font-size: 32px; }
+  .dg-featured, .dg-grid { grid-template-columns: 1fr; }
+}
+
+.policy-meta {
+  display: inline-flex; gap: 8px; font-size: 12.5px; font-weight: 500;
+  color: var(--dg-muted); background: var(--vp-c-brand-soft);
+  border-radius: 6px; padding: 4px 10px; margin: 2px 0 8px;
+}
+
+.vp-doc h1 { letter-spacing: -0.02em; font-weight: 800; }
