@@ -4,7 +4,7 @@
 # ============================================================
 backend:
   name: github
-  repo: GITHUB아이디/delivus-partner-guide   # TODO ① 본인 GitHub아이디/저장소이름 으로 수정
+  repo: jace-githu/delivus-partner-guide   # TODO ① 본인 GitHub아이디/저장소이름 으로 수정
   branch: main
   base_url: https://프로젝트이름.vercel.app   # TODO ② 배포 후 실제 Vercel 주소로 수정
   auth_endpoint: api/auth
