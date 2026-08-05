@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>딜리래빗 가이드 관리자</title>
+  <meta name="robots" content="noindex">
+</head>
+<body>
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    // ---- 커스텀 블록: 콜아웃 (팁 / 주의 / 안내) ----
+    CMS.registerEditorComponent({
+      id: 'callout',
+      label: '콜아웃 박스 (팁·주의·안내)',
+      fields: [
+        { name: 'type', label: '종류', widget: 'select', default: 'tip',
+          options: [
+            { label: '팁 (초록)', value: 'tip' },
+            { label: '주의 (노랑)', value: 'warning' },
+            { label: '안내 (파랑)', value: 'info' }
+          ] },
+        { name: 'title', label: '제목 (비워도 됨)', widget: 'string', required: false },
+        { name: 'content', label: '내용', widget: 'text' }
+      ],
+      pattern: /^:::[ \t]*(tip|warning|info)[ \t]*(.*)\n([\s\S]*?)\n:::$/m,
+      fromBlock: m => ({ type: m[1], title: m[2], content: m[3] }),
+      toBlock: d => `::: ${d.type} ${d.title || ''}\n${d.content || ''}\n:::`,
+      toPreview: d => `<div style="border-left:3px solid #3b82f6;background:#eef3fe;border-radius:0 8px 8px 0;padding:12px 16px"><b>${d.title || d.type}</b><div>${(d.content||'').replace(/\n/g,'<br>')}</div></div>`
+    });
+
+    // ---- 커스텀 블록: 토글 (접기/펼치기) ----
+    CMS.registerEditorComponent({
+      id: 'toggle',
+      label: '토글 (접기·펼치기)',
+      fields: [
+        { name: 'title', label: '토글 제목', widget: 'string' },
+        { name: 'content', label: '펼치면 보이는 내용', widget: 'text' }
+      ],
+      pattern: /^:::[ \t]*details[ \t]+(.*)\n([\s\S]*?)\n:::$/m,
+      fromBlock: m => ({ title: m[1], content: m[2] }),
+      toBlock: d => `::: details ${d.title || ''}\n${d.content || ''}\n:::`,
+      toPreview: d => `<details style="border:1px solid #e2e8f0;border-radius:8px;padding:10px 16px"><summary><b>${d.title||''}</b></summary><div>${(d.content||'').replace(/\n/g,'<br>')}</div></details>`
+    });
+  </script>
+</body>
+</html>

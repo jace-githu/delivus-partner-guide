@@ -1,0 +1,64 @@
+# ============================================================
+# 딜리래빗 화주사 가이드 — 관리자(CMS) 설정
+# 배포 전 TODO 2곳: repo, base_url
+# ============================================================
+backend:
+  name: github
+  repo: GITHUB아이디/delivus-partner-guide   # TODO ① 본인 GitHub아이디/저장소이름 으로 수정
+  branch: main
+  base_url: https://프로젝트이름.vercel.app   # TODO ② 배포 후 실제 Vercel 주소로 수정
+  auth_endpoint: api/auth
+
+media_folder: docs/public/images
+public_folder: /images
+
+locale: ko
+
+collections:
+  - name: start
+    label: 시작하기
+    folder: docs/start
+    create: true
+    delete: false
+    extension: md
+    format: frontmatter
+    identifier_field: title
+    fields:
+      - { label: 문서 제목(목록 표시용), name: title, widget: string }
+      - { label: 본문, name: body, widget: markdown }
+
+  - name: policy
+    label: 운영정책
+    folder: docs/policy
+    create: true
+    delete: false
+    extension: md
+    format: frontmatter
+    identifier_field: title
+    fields:
+      - { label: 문서 제목(목록 표시용), name: title, widget: string }
+      - { label: 본문, name: body, widget: markdown }
+
+  - name: cs
+    label: 문의 · FAQ
+    folder: docs/cs
+    create: false
+    delete: false
+    extension: md
+    format: frontmatter
+    identifier_field: title
+    fields:
+      - { label: 문서 제목(목록 표시용), name: title, widget: string }
+      - { label: 본문, name: body, widget: markdown }
+
+  - name: notice
+    label: 공지 · 개정이력
+    folder: docs/notice
+    create: false
+    delete: false
+    extension: md
+    format: frontmatter
+    identifier_field: title
+    fields:
+      - { label: 문서 제목(목록 표시용), name: title, widget: string }
+      - { label: 본문, name: body, widget: markdown }
