@@ -91,3 +91,18 @@
 }
 
 .vp-doc h1 { letter-spacing: -0.02em; font-weight: 800; }
+
+/* ---------- VitePress 기본 문서 스타일 덮어쓰기 (홈 전용) ---------- */
+.vp-doc .dg-home a { text-decoration: none; font-weight: inherit; }
+.vp-doc .dg-btn-primary, .vp-doc .dg-btn-primary:hover { color: #fff; }
+.vp-doc .dg-btn-ghost { color: var(--dg-ink); }
+.vp-doc .dg-btn-ghost:hover { color: var(--vp-c-brand-1); }
+.vp-doc h2.dg-section-title {
+  border-top: none; padding-top: 0; margin: 0 0 18px;
+  font-size: 15px; font-weight: 700; letter-spacing: 0.02em; color: var(--dg-muted);
+}
+.vp-doc .dg-feature-tag { color: var(--vp-c-brand-1); }
+.vp-doc .dg-feature-title { color: var(--dg-ink); }
+.vp-doc .dg-feature-desc { color: var(--dg-muted); }
+.vp-doc .dg-card-title { color: var(--dg-ink); }
+.vp-doc .dg-card-desc, .vp-doc .dg-card-count { color: var(--dg-muted); }
