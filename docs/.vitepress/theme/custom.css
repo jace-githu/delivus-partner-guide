@@ -164,6 +164,29 @@
 .dg-policy-name { font-size: 15px; font-weight: 700; line-height: 1.4; color: var(--dg-ink); }
 .dg-policy-desc { margin-top: auto; font-size: 12px; line-height: 1.5; color: var(--dg-muted); }
 
+.dg-scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.dg-scenario-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-height: 92px;
+  padding: 17px 18px;
+  border: 1px solid var(--dg-line);
+  border-radius: 12px;
+  background: var(--dg-card-bg);
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s, transform 0.15s;
+}
+
+.dg-scenario-item:hover { border-color: var(--vp-c-brand-3); background: var(--dg-card-hover); transform: translateY(-1px); }
+.dg-scenario-item strong { font-size: 14px; line-height: 1.4; color: var(--dg-ink); }
+.dg-scenario-item span { font-size: 12px; color: var(--dg-muted); }
+
 /* ---------- 카테고리 카드 ---------- */
 .dg-grid {
   display: grid;
@@ -244,6 +267,32 @@
 .policy-map-grid strong { font-size: 13px; color: var(--dg-ink); }
 .policy-map-grid span { font-size: 12px; line-height: 1.45; color: var(--dg-muted); }
 
+/* ---------- 배송 이슈 시나리오 허브 ---------- */
+.scenario-hub {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 28px 0 44px;
+}
+
+.scenario-hub-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 118px;
+  padding: 18px;
+  border: 1px solid var(--dg-line);
+  border-radius: 12px;
+  background: var(--dg-card-bg);
+  text-decoration: none !important;
+  transition: border-color 0.15s, background 0.15s, transform 0.15s;
+}
+
+.scenario-hub-card:hover { border-color: var(--vp-c-brand-3); background: var(--dg-card-hover); transform: translateY(-1px); }
+.scenario-hub-number { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; color: var(--vp-c-brand-1); }
+.scenario-hub-card strong { margin-top: 2px; font-size: 15px; color: var(--dg-ink); }
+.scenario-hub-card span:last-child { margin-top: auto; font-size: 12px; color: var(--dg-muted); }
+
 /* ---------- VitePress 홈 기본 빈 히어로 제거 ---------- */
 .VPHome .VPHero { display: none; }
 .VPContent.is-home { padding-top: 0 !important; }
@@ -258,6 +307,10 @@
 }
 
 /* ---------- 모바일 ---------- */
+@media (max-width: 960px) {
+  .dg-policy-grid, .dg-scenario-grid, .scenario-hub { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 640px) {
   .dg-home { padding: 0 20px 64px; }
   .dg-hero { padding: 56px 0 44px; }
@@ -265,6 +318,7 @@
   .dg-featured, .dg-grid { grid-template-columns: 1fr; }
   .dg-section-heading { align-items: flex-start; flex-direction: column; gap: 8px; }
   .dg-policy-grid { grid-template-columns: 1fr; }
+  .dg-scenario-grid, .scenario-hub { grid-template-columns: 1fr; }
   .policy-map { padding: 18px; }
   .policy-map-heading { align-items: flex-start; flex-direction: column; gap: 6px; }
   .policy-map-grid { grid-template-columns: 1fr; }
