@@ -14,6 +14,24 @@ sidebar: false
   </div>
 </section>
 
+<section class="dg-section dg-scenario-preview">
+  <div class="dg-section-heading">
+    <div>
+      <h2 class="dg-section-title">배송 이슈 유형별 시나리오</h2>
+      <p class="dg-section-lead">문제가 발생했을 때 상황에 맞는 처리 순서를 바로 확인하세요.</p>
+    </div>
+    <a class="dg-section-link" href="/scenarios/">전체 시나리오 보기</a>
+  </div>
+  <div class="dg-scenario-grid">
+    <a class="dg-scenario-item" href="/scenarios/misdelivery"><strong>오배송 · 교차오배송</strong><span>정정배송과 고객 안내</span></a>
+    <a class="dg-scenario-item" href="/scenarios/loss-theft"><strong>분실 · 도난</strong><span>위치 확인과 귀책 판정</span></a>
+    <a class="dg-scenario-item" href="/scenarios/damage"><strong>파손</strong><span>파손 시점과 증빙 확인</span></a>
+    <a class="dg-scenario-item" href="/scenarios/missing-items"><strong>배송 누락 · 일부 제품 누락</strong><span>수량 확인과 후속 처리</span></a>
+    <a class="dg-scenario-item" href="/scenarios/customer-complaint"><strong>고객 불만</strong><span>사실 확인과 재발 방지</span></a>
+    <a class="dg-scenario-item" href="/policy/delivery#악천후-불가항력"><strong>악천후 · 불가항력</strong><span>배송 기준과 지연 안내</span></a>
+  </div>
+</section>
+
 <section class="dg-section">
   <h2 class="dg-section-title">추천 문서</h2>
   <div class="dg-featured">
