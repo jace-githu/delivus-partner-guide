@@ -12,6 +12,7 @@ export default defineConfig({
     nav: [
       { text: '시작하기', link: '/start/about' },
       { text: '운영정책', link: '/policy/overview' },
+      { text: '배송 이슈 시나리오', link: '/scenarios/' },
       { text: 'FAQ', link: '/cs/faq' },
       { text: '공지·개정이력', link: '/notice/' }
     ],
@@ -40,6 +41,19 @@ export default defineConfig({
             { text: '반품 · 회수', link: '/policy/returns' },
             { text: '클레임 · 배상', link: '/policy/claims' },
             { text: '증빙 · 기록 · 보존', link: '/policy/security' }
+          ]
+        }
+      ],
+      '/scenarios/': [
+        {
+          text: '배송 이슈 유형별 시나리오',
+          items: [
+            { text: '전체 시나리오', link: '/scenarios/' },
+            { text: '오배송 · 교차오배송', link: '/scenarios/misdelivery' },
+            { text: '분실 · 도난', link: '/scenarios/loss-theft' },
+            { text: '파손', link: '/scenarios/damage' },
+            { text: '배송 누락 · 일부 제품 누락', link: '/scenarios/missing-items' },
+            { text: '고객 불만', link: '/scenarios/customer-complaint' }
           ]
         }
       ],
