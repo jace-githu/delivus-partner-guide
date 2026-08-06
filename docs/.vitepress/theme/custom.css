@@ -36,13 +36,13 @@
 
 /* ---------- 홈 ---------- */
 .dg-home {
-  max-width: 960px;
+  max-width: 1360px;
   margin: 0 auto;
-  padding: 0 24px 96px;
+  padding: 0 36px 96px;
 }
 
 .dg-hero {
-  padding: 88px 0 64px;
+  padding: 64px 0 52px;
   border-bottom: 1px solid var(--dg-line);
 }
 
@@ -82,19 +82,25 @@
   text-decoration: none;
   transition: background 0.15s, border-color 0.15s;
 }
-.dg-btn-primary { background: var(--vp-c-brand-1); color: #fff; }
+.dg-btn-primary { background: var(--vp-c-brand-1); color: #fff !important; }
 .dg-btn-primary:hover { background: var(--vp-c-brand-2); }
-.dg-btn-ghost { border: 1px solid var(--dg-line); color: var(--dg-ink); }
+.dg-btn-ghost { border: 1px solid var(--dg-line); color: var(--vp-c-brand-1) !important; background: var(--dg-card-bg); }
 .dg-btn-ghost:hover { border-color: var(--vp-c-brand-3); color: var(--vp-c-brand-1); }
 
 /* ---------- 섹션 ---------- */
-.dg-section { padding-top: 56px; }
+.dg-section { padding-top: 48px; }
 
 .dg-section-title {
-  font-size: 15px;
+  font-size: 22px;
   font-weight: 700;
-  letter-spacing: 0.02em;
-  color: var(--dg-muted);
+  letter-spacing: -0.03em;
+  color: var(--dg-ink);
+  margin: 0 0 18px;
+  border: none;
+  padding: 0;
+}
+
+.vp-doc h2.dg-section-title {
   margin: 0 0 18px;
   border: none;
   padding: 0;
@@ -139,6 +145,7 @@
 .dg-card {
   display: flex;
   flex-direction: column;
+  min-height: 188px;
   padding: 24px 26px 22px;
   border: 1px solid var(--dg-line);
   border-radius: 14px;
@@ -165,8 +172,22 @@
 .dg-card-desc { font-size: 14px; color: var(--dg-muted); margin-bottom: 12px; }
 .dg-card-count { font-size: 12px; font-weight: 500; color: var(--dg-muted); opacity: 0.75; }
 
+/* ---------- VitePress 홈 기본 빈 히어로 제거 ---------- */
+.VPHome .VPHero { display: none; }
+.VPContent.is-home { padding-top: 0 !important; }
+
+/* 기본 홈 컨테이너 폭을 데스크톱 화면에 맞게 확장 */
+@media (min-width: 960px) {
+  .VPHome .vp-doc.container {
+    max-width: 1440px;
+    padding-right: 48px;
+    padding-left: 48px;
+  }
+}
+
 /* ---------- 모바일 ---------- */
 @media (max-width: 640px) {
+  .dg-home { padding: 0 20px 64px; }
   .dg-hero { padding: 56px 0 44px; }
   .dg-title { font-size: 32px; }
   .dg-featured, .dg-grid { grid-template-columns: 1fr; }
@@ -243,13 +264,13 @@
 .dark .pf-line-labeled span, .dark .pf-issue { color: #fbbf24 !important; }
 .dark .pf-branch-label.pf-yes { color: #4ade80; }
 
-/* ---------- 배경: 연한 베이지 톤 (라이트 모드) ---------- */
+/* ---------- 넓은 데스크톱 문서 캔버스 ---------- */
 :root {
-  --vp-c-bg: #faf8f3;
-  --vp-c-bg-alt: #f4f1e9;
-  --vp-c-bg-soft: #f4f1e9;
+  --vp-c-bg: #f8fafc;
+  --vp-c-bg-alt: #f1f5f9;
+  --vp-c-bg-soft: #f1f5f9;
   --vp-c-bg-elv: #ffffff;
-  --dg-line: #e8e3d7;
-  --vp-c-divider: #e8e3d7;
-  --vp-c-gutter: #e8e3d7;
+  --dg-line: #e2e8f0;
+  --vp-c-divider: #e2e8f0;
+  --vp-c-gutter: #e2e8f0;
 }
