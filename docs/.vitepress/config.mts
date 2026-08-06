@@ -21,6 +21,7 @@ export default defineConfig({
           text: '시작하기',
           items: [
             { text: '딜리래빗 서비스 소개', link: '/start/about' },
+            { text: '배송 프로세스 한눈에', link: '/start/process' },
             { text: '계약부터 첫 출고까지', link: '/start/onboarding' },
             { text: '시스템 연동 안내', link: '/start/integration' }
           ]
@@ -33,11 +34,11 @@ export default defineConfig({
             { text: '총칙 · 문서 안내', link: '/policy/overview' },
             { text: '입고 · 인수', link: '/policy/inbound' },
             { text: '주문 마감 · 출고', link: '/policy/cutoff' },
-            { text: '배송 기준 (당일 · 새벽)', link: '/policy/delivery' },
+            { text: '배송 기준', link: '/policy/delivery' },
             { text: '미배송 판정 · 처리', link: '/policy/undelivered' },
             { text: '반품 · 회수', link: '/policy/returns' },
             { text: '클레임 · 배상', link: '/policy/claims' },
-            { text: '개인정보 · 보안', link: '/policy/security' }
+            { text: '증빙 · 기록 · 보존', link: '/policy/security' }
           ]
         }
       ],
@@ -83,7 +84,7 @@ export default defineConfig({
     sidebarMenuLabel: '메뉴',
 
     footer: {
-      message: '본 가이드는 딜리버스 운영정책의 공식 안내 문서입니다.',
+      message: '본 가이드는 딜리버스 운영정책의 공식 안내 문서입니다. 세부 기준은 계약서를 따릅니다.',
       copyright: '© Delivus Inc. All rights reserved.'
     }
   }
