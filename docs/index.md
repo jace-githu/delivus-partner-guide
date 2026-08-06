@@ -8,7 +8,6 @@ sidebar: false
 <section class="dg-hero">
   <p class="dg-eyebrow">DELIVUS · 딜리래빗</p>
   <h1 class="dg-title">화주사 가이드</h1>
-  <p class="dg-sub">입고부터 배송, 클레임까지 — 딜리래빗 운영의 모든 기준</p>
   <div class="dg-actions">
     <a class="dg-btn dg-btn-primary" href="/start/about">처음 시작하기</a>
     <a class="dg-btn dg-btn-ghost" href="/policy/overview">운영정책 보기</a>
