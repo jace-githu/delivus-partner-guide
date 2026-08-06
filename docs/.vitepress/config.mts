@@ -4,6 +4,7 @@ export default defineConfig({
   lang: 'ko-KR',
   title: '딜리래빗 화주사 가이드',
   description: '딜리버스 딜리래빗 이용 화주사를 위한 공식 운영 가이드',
+  appearance: false,
   cleanUrls: true,
   lastUpdated: true,
 
@@ -80,7 +81,6 @@ export default defineConfig({
     lastUpdatedText: '마지막 업데이트',
     docFooter: { prev: '이전', next: '다음' },
     returnToTopLabel: '맨 위로',
-    darkModeSwitchLabel: '다크 모드',
     sidebarMenuLabel: '메뉴',
 
     footer: {
