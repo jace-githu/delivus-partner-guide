@@ -14,6 +14,38 @@ sidebar: false
   </div>
 </section>
 
+<section class="dg-section">
+  <div class="dg-section-heading">
+    <div>
+      <h2 class="dg-section-title">처음 이용하신다면</h2>
+      <p class="dg-section-lead">서비스 구조부터 첫 출고까지, 순서대로 따라오세요.</p>
+    </div>
+    <a class="dg-section-link" href="/start/about">시작하기 전체 보기</a>
+  </div>
+  <div class="dg-policy-grid">
+    <a class="dg-policy-item" href="/start/about">
+      <span class="dg-policy-number">01</span>
+      <span class="dg-policy-name">딜리래빗 서비스 소개</span>
+      <span class="dg-policy-desc">운영 시간과 서비스 원칙을 확인합니다</span>
+    </a>
+    <a class="dg-policy-item" href="/start/process">
+      <span class="dg-policy-number">02</span>
+      <span class="dg-policy-name">배송 프로세스 한눈에</span>
+      <span class="dg-policy-desc">접수부터 완료·반송까지 전체 흐름</span>
+    </a>
+    <a class="dg-policy-item" href="/start/onboarding">
+      <span class="dg-policy-number">03</span>
+      <span class="dg-policy-name">계약부터 첫 출고까지</span>
+      <span class="dg-policy-desc">사전 협의부터 정식 오픈까지 4단계</span>
+    </a>
+    <a class="dg-policy-item" href="/start/integration">
+      <span class="dg-policy-number">04</span>
+      <span class="dg-policy-name">시스템 연동 안내</span>
+      <span class="dg-policy-desc">배송 상태 수신과 알림톡 연동</span>
+    </a>
+  </div>
+</section>
+
 <section class="dg-section dg-scenario-preview">
   <div class="dg-section-heading">
     <div>
@@ -29,22 +61,6 @@ sidebar: false
     <a class="dg-scenario-item" href="/scenarios/missing-items"><strong>배송 누락 · 일부 제품 누락</strong><span>수량 확인과 후속 처리</span></a>
     <a class="dg-scenario-item" href="/scenarios/customer-complaint"><strong>고객 불만</strong><span>사실 확인과 재발 방지</span></a>
     <a class="dg-scenario-item" href="/policy/delivery#악천후-불가항력"><strong>악천후 · 불가항력</strong><span>배송 기준과 지연 안내</span></a>
-  </div>
-</section>
-
-<section class="dg-section">
-  <h2 class="dg-section-title">추천 문서</h2>
-  <div class="dg-featured">
-    <a class="dg-feature-card" href="/start/onboarding">
-      <span class="dg-feature-tag">시작하기</span>
-      <span class="dg-feature-title">딜리래빗이 처음이라면</span>
-      <span class="dg-feature-desc">계약부터 첫 출고까지, 순서대로 안내합니다</span>
-    </a>
-    <a class="dg-feature-card" href="/policy/undelivered">
-      <span class="dg-feature-tag">운영정책</span>
-      <span class="dg-feature-title">미배송 · 클레임 기준</span>
-      <span class="dg-feature-desc">판정 기준과 처리 절차를 확인하세요</span>
-    </a>
   </div>
 </section>
 
@@ -75,7 +91,7 @@ sidebar: false
     <a class="dg-policy-item" href="/policy/delivery">
       <span class="dg-policy-number">04</span>
       <span class="dg-policy-name">배송 기준</span>
-      <span class="dg-policy-desc">배송 완료와 증빙 기준을 확인합니다</span>
+      <span class="dg-policy-desc">배송 완료와 대응배송 기준을 확인합니다</span>
     </a>
     <a class="dg-policy-item" href="/policy/undelivered">
       <span class="dg-policy-number">05</span>
@@ -94,28 +110,21 @@ sidebar: false
     </a>
     <a class="dg-policy-item" href="/policy/security">
       <span class="dg-policy-number">08</span>
-      <span class="dg-policy-name">개인정보 · 보안 정책</span>
-      <span class="dg-policy-desc">증빙과 개인정보 취급 기준을 확인합니다</span>
+      <span class="dg-policy-name">증빙 · 기록 · 보존 정책</span>
+      <span class="dg-policy-desc">증빙 기준과 보존 기간을 확인합니다</span>
     </a>
   </div>
 </section>
 
 <section class="dg-section">
-  <h2 class="dg-section-title">전체 카테고리</h2>
+  <div class="dg-section-heading">
+    <div>
+      <h2 class="dg-section-title">도움이 더 필요하다면</h2>
+      <p class="dg-section-lead">가이드에서 찾지 못한 내용은 담당 채널로 문의해 주세요.</p>
+    </div>
+  </div>
   <div class="dg-grid">
-    <a class="dg-card" href="/start/about">
-      <span class="dg-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l7-8 7 8M5 12v7a1 1 0 001 1h12a1 1 0 001-1v-7"/></svg></span>
-      <span class="dg-card-title">시작하기</span>
-      <span class="dg-card-desc">서비스 소개와 첫 출고까지의 준비</span>
-      <span class="dg-card-count">3개 문서</span>
-    </a>
-    <a class="dg-card" href="/policy/overview">
-      <span class="dg-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14a1 1 0 01-1 1H6a1 1 0 01-1-1V4a1 1 0 011-1z"/><path d="M9 12h6M9 16h6"/></svg></span>
-      <span class="dg-card-title">운영정책</span>
-      <span class="dg-card-desc">입고 · 출고 · 배송 · 클레임의 공식 기준</span>
-      <span class="dg-card-count">8개 문서</span>
-    </a>
-    <a class="dg-card" href="/cs/contact">
+    <a class="dg-card" href="/cs/faq">
       <span class="dg-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 01-8 8H4l2.5-2.5A8 8 0 1121 12z"/></svg></span>
       <span class="dg-card-title">문의 · FAQ</span>
       <span class="dg-card-desc">자주 묻는 질문과 상황별 문의 채널</span>
