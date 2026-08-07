@@ -10,12 +10,12 @@ export default defineConfig({
 
   themeConfig: {
     nav: [
-      { text: '시작하기', link: '/start/about' },
-      { text: '운영정책', link: '/policy/overview' },
+                  { text: '시작하기', link: '/start/about' },
       { text: '배송 이슈 시나리오', link: '/scenarios/' },
+      { text: '운영정책', link: '/policy/overview' },
       { text: 'FAQ', link: '/cs/faq' },
       { text: '공지·개정이력', link: '/notice/' }
-    ],
+],
 
     sidebar: {
       '/start/': [
