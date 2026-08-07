@@ -103,7 +103,7 @@ title: 배송 프로세스 한눈에
 <div class="pf-line pf-line-labeled"><span>없음</span></div>
 
 <div class="pf-node pf-alert">
-  <span class="pf-stage">미배송</span>
+  <span class="pf-stage">미배송 · 1차 시도 종료</span>
   <strong>미배송 처리 · 물품 반납</strong>
   <p>미배송 알림톡 즉시 발송 → 업무 종료 후 거점 반납</p>
   <a class="pf-issue" href="/policy/undelivered">⚠ 미배송 처리 시나리오</a>
@@ -118,17 +118,17 @@ title: 배송 프로세스 한눈에
 <div class="pf-branch">
   <span class="pf-branch-label pf-yes">성공</span>
   <div class="pf-done">
-    <strong>익일 재배송 완료</strong>
-    <p>확보한 출입정보로 다음 배송 타임에 재배송</p>
+    <strong>2차 배송(재배송) 완료</strong>
+    <p>확보한 출입정보로 D+1 배송 타임에 재배송</p>
   </div>
 </div>
 
-<div class="pf-line pf-line-labeled"><span>D+2까지 연락 불가</span></div>
+<div class="pf-line pf-line-labeled"><span>D+1 연락 불가 · 부재</span></div>
 
 <div class="pf-node pf-alert">
-  <span class="pf-stage">반송</span>
+  <span class="pf-stage">반송 · D+2</span>
   <strong>화주사 공유 후 반송</strong>
-  <p>D+3 반송 전 건은 화주사 승인 후 진행</p>
+  <p>2회 시도 종료 — 다음 회수 간선을 통해 D+2에 화주사로 반송</p>
   <a class="pf-issue" href="/policy/returns">⚠ 반품 · 반납 시나리오</a>
 </div>
 
@@ -142,5 +142,5 @@ title: 배송 프로세스 한눈에
 | 대기 시간 | 연락(발송) 후 **5분** |
 | 고객 응답 시 | 고객이 원하는 장소에 배송 (주소지 변경 불가) |
 | 고객 미응답 시 | 무인택배함 → 경비실 → 우편함 순 대응배송 |
-| 대응 장소 없을 경우 | 미배송 처리 → D+1 고객 컨택 → 익일 재배송 |
-| 최종 부재 시 | D+2까지 연락 시도 → 화주사 공유 후 반송 |
+| 대응 장소 없을 경우 | 미배송 처리(1차 종료) → D+1 고객 컨택 → 연락 성공 시 2차 배송 시도 |
+| 최종 부재 시 | D+1 연락 불가·부재 시 반송 확정 → **D+2 화주사 반송** (총 2회 시도) |
