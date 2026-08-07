@@ -400,3 +400,40 @@
   --vp-c-divider: #e2e8f0;
   --vp-c-gutter: #e2e8f0;
 }
+
+/* ---------- VitePress 기본 링크 스타일 덮어쓰기 (홈 · 카드 UI) ---------- */
+.vp-doc .dg-home a,
+.vp-doc .policy-map a,
+.vp-doc .scenario-hub a {
+  text-decoration: none !important;
+  font-weight: inherit;
+  color: inherit;
+}
+.vp-doc .dg-home a:hover,
+.vp-doc .policy-map a:hover,
+.vp-doc .scenario-hub a:hover { text-decoration: none !important; }
+
+/* 브랜드 색상이 필요한 요소 */
+.vp-doc .dg-btn-primary { color: #fff !important; }
+.vp-doc .dg-btn-ghost,
+.vp-doc .dg-section-link { color: var(--vp-c-brand-1) !important; }
+.vp-doc .dg-eyebrow,
+.vp-doc .dg-feature-tag,
+.vp-doc .dg-policy-number,
+.vp-doc .scenario-hub-number { color: var(--vp-c-brand-1); }
+
+/* 카드 내부 텍스트 색상 복구 */
+.vp-doc .dg-feature-title,
+.vp-doc .dg-card-title,
+.vp-doc .dg-policy-name,
+.vp-doc .dg-scenario-item strong,
+.vp-doc .scenario-hub-card strong,
+.vp-doc .policy-map-grid strong { color: var(--dg-ink); }
+.vp-doc .dg-feature-desc,
+.vp-doc .dg-card-desc,
+.vp-doc .dg-card-count,
+.vp-doc .dg-policy-desc,
+.vp-doc .dg-scenario-item span,
+.vp-doc .dg-section-lead,
+.vp-doc .scenario-hub-card span:last-child,
+.vp-doc .policy-map-grid span { color: var(--dg-muted); }
