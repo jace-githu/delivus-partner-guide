@@ -9,10 +9,10 @@ title: 운영정책 총칙 · 문서 안내
 <nav class="policy-map" aria-label="운영정책 문서 목록">
   <div class="policy-map-heading">
     <div>
-      <p class="policy-map-kicker">운영정책 문서 목록</p>
+      <p class="policy-map-kicker">운영정책 세부 문서</p>
       <p class="policy-map-title">필요한 기준을 주제별로 확인하세요.</p>
     </div>
-    <span class="policy-map-count">8개 문서</span>
+    <span class="policy-map-count">7개 문서</span>
   </div>
   <div class="policy-map-grid">
     <a href="/policy/inbound"><strong>입고 · 인수 정책</strong><span>인수 기준과 취급 상품</span></a>
@@ -21,7 +21,7 @@ title: 운영정책 총칙 · 문서 안내
     <a href="/policy/undelivered"><strong>미배송 판정 · 처리 정책</strong><span>판정 기준과 처리 타임라인</span></a>
     <a href="/policy/returns"><strong>반품 · 회수 정책</strong><span>반품 요청과 반송 처리</span></a>
     <a href="/policy/claims"><strong>클레임 · 배상 정책</strong><span>사고 유형별 대응과 보상</span></a>
-    <a href="/policy/security"><strong>개인정보 · 보안 정책</strong><span>증빙과 개인정보 취급</span></a>
+    <a href="/policy/security"><strong>증빙 · 기록 · 보존 정책</strong><span>증빙 기준과 보존 기간</span></a>
   </div>
 </nav>
 
