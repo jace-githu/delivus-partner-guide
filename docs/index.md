@@ -5,9 +5,10 @@ sidebar: false
 
 <div class="dg-home">
 
-<section class="dg-hero">
+<section class="dg-hero dg-hero-photo">
   <p class="dg-eyebrow">DELIVUS · 딜리래빗</p>
   <h1 class="dg-title">화주사 가이드</h1>
+  <p class="dg-hero-lead">AI 기술 기반 당일 도착보장 배송, 딜리래빗의 운영 기준과 처리 절차를 한 곳에서 확인하세요.</p>
   <div class="dg-actions">
     <a class="dg-btn dg-btn-primary" href="/start/about">처음 시작하기</a>
     <a class="dg-btn dg-btn-ghost" href="/policy/overview">운영정책 보기</a>
@@ -20,7 +21,7 @@ sidebar: false
   </button>
 </section>
 
-<section class="dg-section">
+<section class="dg-section dg-reveal">
   <div class="dg-section-heading">
     <div>
       <h2 class="dg-section-title">처음 이용하신다면</h2>
@@ -56,7 +57,7 @@ sidebar: false
   </div>
 </section>
 
-<section class="dg-section dg-scenario-preview">
+<section class="dg-section dg-scenario-preview dg-reveal">
   <div class="dg-section-heading">
     <div>
       <h2 class="dg-section-title">배송 이슈 유형별 시나리오</h2>
@@ -74,7 +75,7 @@ sidebar: false
   </div>
 </section>
 
-<section class="dg-section dg-policy-preview">
+<section class="dg-section dg-policy-preview dg-reveal">
   <div class="dg-section-heading">
     <div>
       <h2 class="dg-section-title">운영정책 한눈에 보기</h2>
@@ -134,7 +135,7 @@ sidebar: false
   </div>
 </section>
 
-<section class="dg-section">
+<section class="dg-section dg-reveal">
   <div class="dg-section-heading">
     <div>
       <h2 class="dg-section-title">도움이 더 필요하다면</h2>
