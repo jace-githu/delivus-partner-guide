@@ -5,15 +5,23 @@ export default {
   extends: DefaultTheme,
   enhanceApp({ router }) {
     if (typeof window === 'undefined') return
-    // 접근성: 모션 최소화 설정이면 연출을 적용하지 않는다
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
     // JS가 살아 있을 때만 숨김 스타일을 켠다 (실패 시 본문이 사라지지 않도록)
     document.documentElement.classList.add('dg-anim')
 
-    const observe = () => {
+    const revealAll = () =>
+      document
+        .querySelectorAll<HTMLElement>('.dg-reveal:not(.is-in)')
+        .forEach((t) => t.classList.add('is-in'))
+
+    const setup = () => {
+      // 어떤 이유로든 관찰이 걸리지 않아도 이 시점엔 모두 보이게 한다
+      window.setTimeout(revealAll, 1200)
+
       const targets = document.querySelectorAll<HTMLElement>('.dg-reveal:not(.is-in)')
       if (!targets.length) return
+
       const io = new IntersectionObserver(
         (entries) => {
           for (const e of entries) {
@@ -23,12 +31,15 @@ export default {
             }
           }
         },
-        { rootMargin: '0px 0px -12% 0px', threshold: 0.08 }
+        { rootMargin: '0px', threshold: 0 }
       )
       targets.forEach((t) => io.observe(t))
     }
 
-    router.onAfterRouteChange = () => requestAnimationFrame(observe)
-    requestAnimationFrame(observe)
+    // 렌더링이 끝난 뒤에 실행해야 대상이 잡힌다
+    const schedule = () => window.setTimeout(setup, 80)
+    router.onAfterRouteChange = schedule
+    if (document.readyState === 'complete') schedule()
+    else window.addEventListener('load', schedule, { once: true })
   }
 }

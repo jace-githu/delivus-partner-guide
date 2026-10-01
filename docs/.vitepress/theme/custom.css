@@ -576,3 +576,23 @@
 /* ---------- 홈에서는 네비 검색을 숨기고 히어로 검색만 둔다 ----------
    하위 문서 페이지에는 히어로가 없으므로 네비 검색이 그대로 유지된다. */
 body:has(.dg-hero-photo) .VPNavBarSearch { display: none; }
+
+/* ---------- 홈 상단 네비 가독성 ----------
+   VitePress 홈 레이아웃은 네비 배경이 투명이라, 사진 히어로 위에서 로고와
+   메뉴가 묻힌다. 홈에서는 네비를 불투명하게 하고 히어로를 그 아래에서 시작시킨다. */
+body:has(.dg-hero-photo) .VPNavBar,
+body:has(.dg-hero-photo) .VPNavBar.home {
+  background-color: var(--vp-c-bg);
+  border-bottom: 1px solid var(--dg-line);
+}
+body:has(.dg-hero-photo) .VPNavBar .divider { display: none; }
+.dg-home { padding-top: 28px; }
+
+/* 히어로 문구가 사진 밝은 부분과 겹치지 않도록 글자 쪽을 더 눌러준다 */
+.dg-hero-photo::after {
+  background:
+    linear-gradient(100deg, rgba(8, 11, 26, 0.95) 0%, rgba(8, 11, 26, 0.88) 38%, rgba(8, 11, 26, 0.55) 68%, rgba(8, 11, 26, 0.35) 100%),
+    linear-gradient(180deg, rgba(56, 56, 240, 0.2) 0%, rgba(8, 11, 26, 0) 55%);
+}
+.dg-hero-lead { max-width: 440px; }
+.dg-hero-photo .dg-title { text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45); }
