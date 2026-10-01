@@ -37,9 +37,11 @@ title: 배송 기준
 
 ### 대응배송 장소 우선순위
 
-1. **무인택배함**
-2. **경비실 내부**
-3. **우편함 내부**
+<ol class="dg-priority">
+  <li><span class="dg-pri-n">1</span><div><strong>무인택배함</strong><span class="dg-pri-d">택배함 번호·비밀번호를 앱에 정확히 입력</span></div></li>
+  <li><span class="dg-pri-n">2</span><div><strong>경비실 내부</strong><span class="dg-pri-d">무인택배함 이용이 불가한 경우</span></div></li>
+  <li><span class="dg-pri-n">3</span><div><strong>우편함 내부</strong><span class="dg-pri-d">앞의 두 곳이 모두 불가한 경우</span></div></li>
+</ol>
 
 ::: warning 무인택배함 배송 시 필수 사항
 앱 내 수취변경 기능을 사용해 **택배함 번호·비밀번호를 정확히 입력**하며, 비밀번호는 **고객 연락처 뒤 4자리**로 설정합니다.
