@@ -478,7 +478,7 @@
 }
 .dg-hero-photo::before {
   content: ""; position: absolute; inset: 0; z-index: -2;
-  background: url('/brand/hub-wide.jpg') center 62% / cover no-repeat;
+  background: url('/brand/hub-hero.jpg') center 58% / cover no-repeat;
   transform: scale(1.04);
 }
 .dg-hero-photo::after {
