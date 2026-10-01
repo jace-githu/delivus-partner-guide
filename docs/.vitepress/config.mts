@@ -9,6 +9,9 @@ export default defineConfig({
   lastUpdated: true,
 
   themeConfig: {
+    logo: { src: '/brand/logo-dillyrabbit.png', alt: '딜리래빗' },
+    siteTitle: '화주사 가이드',
+
     nav: [
                   { text: '시작하기', link: '/start/about' },
       { text: '배송 이슈 시나리오', link: '/scenarios/' },
