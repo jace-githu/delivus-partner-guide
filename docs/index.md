@@ -24,7 +24,7 @@ sidebar: false
     </div>
     <div class="dg-hero-figure" aria-hidden="true">
       <div class="dg-hero-stage">
-        <video class="dg-hero-video" autoplay muted loop playsinline preload="auto" poster="/brand/hero-art.webp" width="560" height="560">
+        <video class="dg-hero-video" autoplay muted loop playsinline preload="auto" poster="/brand/hero-art.webp" width="960" height="720">
           <source src="/brand/video/journey.webm" type="video/webm">
           <source src="/brand/video/journey.mp4" type="video/mp4">
         </video>
