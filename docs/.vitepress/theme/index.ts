@@ -53,50 +53,8 @@ export default {
       update()
     }
 
-    // 배송 여정: 배경 영상 위에서 STEP 01~04가 순서대로 진행된다
-    let journeyTimer = 0
-    const journey = () => {
-      const band = document.querySelector<HTMLElement>('.dg-journey-band')
-      const steps = band?.querySelectorAll<HTMLElement>('.dg-journey li')
-      if (!band || !steps || steps.length < 2) return
-
-      const video = band.querySelector<HTMLVideoElement>('.dg-journey-video')
-      let i = 0
-      const show = (n: number) => {
-        steps.forEach((s, idx) => s.classList.toggle('is-on', idx === n))
-      }
-      const stop = () => {
-        if (journeyTimer) { window.clearInterval(journeyTimer); journeyTimer = 0 }
-      }
-      const start = () => {
-        if (journeyTimer) return
-        journeyTimer = window.setInterval(() => {
-          i = (i + 1) % steps.length
-          show(i)
-        }, 2600)
-      }
-
-      // 화면에서 벗어나면 멈춰서 불필요한 재생·연산을 막는다
-      const io = new IntersectionObserver(
-        (entries) => {
-          for (const e of entries) {
-            if (e.isIntersecting) {
-              video?.play().catch(() => {})
-              start()
-            } else {
-              video?.pause()
-              stop()
-            }
-          }
-        },
-        { threshold: 0.15 }
-      )
-      io.observe(band)
-      show(0)
-    }
-
     // 렌더링이 끝난 뒤에 실행해야 대상이 잡힌다
-    const schedule = () => window.setTimeout(() => { setup(); parallax(); journey() }, 80)
+    const schedule = () => window.setTimeout(() => { setup(); parallax() }, 80)
     router.onAfterRouteChange = schedule
     if (document.readyState === 'complete') schedule()
     else window.addEventListener('load', schedule, { once: true })
