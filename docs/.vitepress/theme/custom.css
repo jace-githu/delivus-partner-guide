@@ -70,6 +70,45 @@
 .dg-chips a { padding: 4px 10px; background: #eae6fb; border-radius: 5px; color: #71668f; }
 .dg-chips a:hover { background: #ddd5ff; }
 
+/* 히어로 일러스트 주변 문구 칩 */
+.dg-hero-figure { position: relative; width: 100%; max-width: 420px; margin-left: auto; }
+.dg-hero-figure .dg-hero-art { max-width: 100%; margin: 0; }
+.dg-pill {
+  position: absolute; display: flex; align-items: center; gap: 9px;
+  background: #fff; border-radius: 12px; padding: 9px 14px 9px 10px;
+  box-shadow: 0 8px 22px rgba(70, 52, 150, 0.12);
+  font-size: 11px; line-height: 1.45; white-space: nowrap;
+  animation: dg-float 5.5s ease-in-out infinite;
+}
+.dg-pill i {
+  width: 22px; height: 22px; border-radius: 50%; flex: none;
+  background: var(--dg-lav); position: relative;
+}
+.dg-pill i::after {
+  content: ''; position: absolute; left: 7px; top: 5px;
+  width: 6px; height: 10px; border: solid var(--dg-deep);
+  border-width: 0 2px 2px 0; transform: rotate(42deg);
+}
+.dg-pill-b i { background: var(--dg-mint); }
+.dg-pill-b i::after { border-color: #2f9e78; }
+.dg-pill b { display: block; font-weight: 650; color: var(--dg-ink); }
+.dg-pill em { display: block; font-style: normal; color: #8b86a0; }
+.dg-pill-a { left: -6%; top: 14%; animation-delay: -1.2s; }
+.dg-pill-b { right: -4%; bottom: 18%; animation-delay: -3s; }
+
+.dg-dot { position: absolute; border-radius: 50%; background: #c9bdff; }
+.dg-dot-1 { width: 7px; height: 7px; right: 10%; top: 8%; }
+.dg-dot-2 { width: 5px; height: 5px; left: 4%; top: 46%; background: #ddd6ff; }
+.dg-dot-3 { width: 9px; height: 9px; right: 20%; bottom: 6%; background: #e4defd; }
+
+@keyframes dg-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dg-pill { animation: none; }
+}
+
 /* ---------- 공지 띠 ---------- */
 .dg-notice { border-bottom: 1px solid var(--dg-line); background: #fff; }
 .dg-notice-inner {
@@ -123,6 +162,36 @@
 .dg-step strong { font-size: 14px; font-weight: 650; display: block; color: var(--dg-ink); margin-top: 2px; }
 .dg-step p { font-size: 11px; color: var(--dg-muted); margin-top: 6px !important; }
 .dg-step:hover strong { color: var(--dg-purple); }
+
+/* ---------- 배송 여정 ---------- */
+.vp-doc .dg-journey, .vp-doc .dg-journey li { list-style: none; }
+.vp-doc .dg-journey li::marker { content: none; }
+.dg-journey {
+  list-style: none; padding-left: 0 !important; margin: 0;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; position: relative;
+}
+.dg-journey li {
+  background: #fff; border: 1px solid var(--dg-line); border-radius: 16px;
+  padding: 18px 18px 22px; text-align: center; position: relative;
+}
+.dg-journey li::after {
+  content: ''; position: absolute; top: 76px; right: -11px; width: 8px; height: 8px;
+  border-top: 2px solid #cfc6ff; border-right: 2px solid #cfc6ff;
+  transform: rotate(45deg); z-index: 1;
+}
+.dg-journey li:last-child::after { display: none; }
+.dg-journey img { width: 110px; height: 110px; margin: 0 auto 10px; display: block; }
+.dg-j-step { font-size: 10px; font-weight: 750; letter-spacing: 0.1em; color: var(--dg-purple); display: block; }
+.dg-journey strong { display: block; font-size: 15px; font-weight: 700; color: var(--dg-ink); margin-top: 4px; }
+.dg-journey p { font-size: 11.5px; line-height: 1.75; color: var(--dg-muted); margin-top: 8px !important; }
+@media (max-width: 1000px) { .dg-journey img { width: 88px; height: 88px; } }
+@media (max-width: 760px) {
+  .dg-journey { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .dg-journey li::after { display: none; }
+  .dg-journey img { width: 76px; height: 76px; }
+  .dg-journey strong { font-size: 13px; }
+  .dg-journey p { font-size: 10.5px; }
+}
 
 /* ---------- 배송 이슈 ---------- */
 .dg-issues { display: grid; grid-template-columns: repeat(3, 1fr); gap: 13px; }
@@ -178,7 +247,12 @@
   .dg-home, .dg-hero-inner, .dg-notice-inner, .dg-policy-inner { padding-left: 22px; padding-right: 22px; }
   .dg-hero-inner { grid-template-columns: 1fr; padding-top: 34px; padding-bottom: 26px; }
   .dg-hero h1 { font-size: 32px; }
-  .dg-hero-art { max-width: 280px; margin: 0 auto; order: 2; }
+  .dg-hero-figure { max-width: 300px; margin: 0 auto; order: 2; }
+  .dg-pill { font-size: 10px; padding: 7px 11px 7px 8px; }
+  .dg-pill i { width: 18px; height: 18px; }
+  .dg-pill i::after { left: 6px; top: 4px; width: 5px; height: 8px; }
+  .dg-pill-a { left: -4%; top: 10%; }
+  .dg-pill-b { right: -2%; bottom: 14%; }
   .dg-section { padding-top: 36px; }
   .dg-section h2, .dg-policy-inner h2 { font-size: 23px; }
   .dg-start { grid-template-columns: 1fr; gap: 12px; }
