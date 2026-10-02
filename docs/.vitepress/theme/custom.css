@@ -163,34 +163,95 @@
 .dg-step p { font-size: 11px; color: var(--dg-muted); margin-top: 6px !important; }
 .dg-step:hover strong { color: var(--dg-purple); }
 
-/* ---------- 배송 여정 ---------- */
+/* ---------- 배송 여정 — 배경 영상 섹션 ---------- */
+.dg-journey-band {
+  position: relative; isolation: isolate; overflow: hidden;
+  margin: 76px 0 0; padding: 86px 28px 92px; background: #14121f;
+}
+.dg-journey-video {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; z-index: -2; pointer-events: none;
+  opacity: 0.7; filter: saturate(0.85) contrast(1.04);
+}
+.dg-journey-band::before {
+  content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(90% 70% at 20% 0%, rgba(116, 100, 255, 0.34), transparent 70%),
+    linear-gradient(180deg, rgba(14, 12, 28, 0.82) 0%, rgba(14, 12, 28, 0.5) 40%, rgba(14, 12, 28, 0.88) 100%);
+}
+.dg-journey-inner { max-width: 1180px; margin: 0 auto; }
+.dg-journey-band .dg-eyebrow { color: #b7acff; }
+.dg-journey-band h2 {
+  border-top: 0 !important; padding-top: 0 !important; margin: 10px 0 0 !important;
+  font-size: 28px; font-weight: 750; letter-spacing: -0.02em; color: #fff;
+}
+.dg-journey-lead { font-size: 14px; color: rgba(255, 255, 255, 0.74); margin: 10px 0 0 !important; }
+
 .vp-doc .dg-journey, .vp-doc .dg-journey li { list-style: none; }
 .vp-doc .dg-journey li::marker { content: none; }
 .dg-journey {
-  list-style: none; padding-left: 0 !important; margin: 0;
+  list-style: none; padding-left: 0 !important; margin: 34px 0 0;
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; position: relative;
 }
 .dg-journey li {
-  background: #fff; border: 1px solid var(--dg-line); border-radius: 16px;
-  padding: 18px 18px 22px; text-align: center; position: relative;
+  background: rgba(255, 255, 255, 0.07); border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px; padding: 18px 18px 22px; text-align: center; position: relative;
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  transition: background 0.5s ease, border-color 0.5s ease, transform 0.5s ease;
 }
 .dg-journey li::after {
   content: ''; position: absolute; top: 76px; right: -11px; width: 8px; height: 8px;
-  border-top: 2px solid #cfc6ff; border-right: 2px solid #cfc6ff;
+  border-top: 2px solid rgba(255, 255, 255, 0.4); border-right: 2px solid rgba(255, 255, 255, 0.4);
   transform: rotate(45deg); z-index: 1;
 }
 .dg-journey li:last-child::after { display: none; }
-.dg-journey img { width: 110px; height: 110px; margin: 0 auto 10px; display: block; }
-.dg-j-step { font-size: 10px; font-weight: 750; letter-spacing: 0.1em; color: var(--dg-purple); display: block; }
-.dg-journey strong { display: block; font-size: 15px; font-weight: 700; color: var(--dg-ink); margin-top: 4px; }
-.dg-journey p { font-size: 11.5px; line-height: 1.75; color: var(--dg-muted); margin-top: 8px !important; }
+.dg-journey img {
+  width: 110px; height: 110px; margin: 0 auto 10px; display: block;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.6s ease;
+  filter: brightness(0.86) saturate(0.86);
+}
+.dg-j-step { font-size: 10px; font-weight: 750; letter-spacing: 0.1em; color: #b7acff; display: block; }
+.dg-journey strong { display: block; font-size: 15px; font-weight: 700; color: #fff; margin-top: 4px; }
+.dg-journey p { font-size: 11.5px; line-height: 1.75; color: rgba(255, 255, 255, 0.68); margin-top: 8px !important; }
+
+/* 진행 중인 단계 강조 — JS가 is-on 클래스를 순차 이동 */
+.dg-journey li.is-on {
+  background: rgba(255, 255, 255, 0.15); border-color: rgba(183, 172, 255, 0.72);
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(183, 172, 255, 0.3) inset;
+}
+.dg-journey li.is-on img { transform: scale(1.08); filter: none; }
+.dg-journey li.is-on p { color: rgba(255, 255, 255, 0.86); }
+/* 단계 진행 바 */
+.dg-journey li::before {
+  content: ''; position: absolute; left: 18px; right: 18px; bottom: 12px; height: 2px;
+  border-radius: 2px; background: rgba(255, 255, 255, 0.14);
+  transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease;
+}
+.dg-journey li.is-on::before {
+  background: linear-gradient(90deg, #b7acff, #fff);
+  animation: dg-j-bar 2.6s linear forwards;
+}
+@keyframes dg-j-bar { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+.dg-journey-link { margin-top: 26px; color: #fff; border-color: rgba(255, 255, 255, 0.3); }
+.dg-journey-link:hover { background: rgba(255, 255, 255, 0.12); }
+
 @media (max-width: 1000px) { .dg-journey img { width: 88px; height: 88px; } }
 @media (max-width: 760px) {
+  .dg-journey-band { margin-top: 56px; padding: 58px 22px 62px; }
+  .dg-journey-band h2 { font-size: 22px; }
   .dg-journey { grid-template-columns: 1fr 1fr; gap: 10px; }
   .dg-journey li::after { display: none; }
   .dg-journey img { width: 76px; height: 76px; }
   .dg-journey strong { font-size: 13px; }
   .dg-journey p { font-size: 10.5px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dg-journey-video { display: none; }
+  .dg-journey li, .dg-journey img { transition: none; }
+  .dg-journey li.is-on { transform: none; }
+  .dg-journey li.is-on::before { animation: none; transform: scaleX(1); }
 }
 
 /* ---------- 배송 이슈 ---------- */
@@ -487,6 +548,7 @@ body:has(.dg-hero) .VPNavBarSearch { display: none; }
 .vp-doc .dg-hero a,
 .vp-doc .dg-notice a,
 .vp-doc .dg-policy-band a,
+.vp-doc .dg-journey-band a,
 .vp-doc .policy-map a,
 .vp-doc .scenario-hub a,
 .vp-doc .dg-priority a,
@@ -497,6 +559,7 @@ body:has(.dg-hero) .VPNavBarSearch { display: none; }
 }
 .vp-doc .dg-home a:hover,
 .vp-doc .dg-hero a:hover,
+.vp-doc .dg-journey-band a:hover,
 .vp-doc .dg-policy-band a:hover,
 .vp-doc .policy-map a:hover,
 .vp-doc .scenario-hub a:hover { text-decoration: none !important; }
@@ -516,3 +579,4 @@ body:has(.dg-hero) .VPNavBarSearch { display: none; }
 .vp-doc .policy-map-grid span,
 .vp-doc .scenario-hub-card span:last-child { color: var(--dg-muted); }
 .vp-doc .scenario-hub-number { color: var(--dg-purple); }
+.vp-doc .dg-journey-band a { color: #fff; }
