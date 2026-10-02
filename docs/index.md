@@ -31,25 +31,25 @@ sidebar: false
   </div>
   <div class="dg-policy-grid">
     <a class="dg-policy-item" href="/start/about">
-      <svg class="dg-pi-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+      <img class="dg-pi-ico" src="/brand/icons/start-about.webp" alt="지도 핀" width="224" height="224" loading="lazy" decoding="async">
       <span class="dg-policy-number">01</span>
       <span class="dg-policy-name">딜리래빗 서비스 소개</span>
       <span class="dg-policy-desc">운영 시간과 서비스 원칙을 확인합니다</span>
     </a>
     <a class="dg-policy-item" href="/start/process">
-      <svg class="dg-pi-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/><path d="M7 12h3M14 12h3"/></svg>
+      <img class="dg-pi-ico" src="/brand/icons/start-process.webp" alt="컨베이어 벨트" width="224" height="224" loading="lazy" decoding="async">
       <span class="dg-policy-number">02</span>
       <span class="dg-policy-name">배송 프로세스 한눈에</span>
       <span class="dg-policy-desc">접수부터 완료·반송까지 전체 흐름</span>
     </a>
     <a class="dg-policy-item" href="/start/onboarding">
-      <svg class="dg-pi-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4h6v3H9z"/><path d="M15 5h3v15H6V5h3"/><path d="M9.5 13l2 2 3.5-3.5"/></svg>
+      <img class="dg-pi-ico" src="/brand/icons/start-onboarding.webp" alt="체크리스트" width="224" height="224" loading="lazy" decoding="async">
       <span class="dg-policy-number">03</span>
       <span class="dg-policy-name">계약부터 첫 출고까지</span>
       <span class="dg-policy-desc">사전 협의부터 정식 오픈까지 4단계</span>
     </a>
     <a class="dg-policy-item" href="/start/integration">
-      <svg class="dg-pi-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 005.66 0l2.5-2.5a4 4 0 00-5.66-5.66L11 7.34"/><path d="M14 10a4 4 0 00-5.66 0l-2.5 2.5a4 4 0 005.66 5.66L13 16.66"/></svg>
+      <img class="dg-pi-ico" src="/brand/icons/start-integration.webp" alt="맞물린 퍼즐 조각" width="224" height="224" loading="lazy" decoding="async">
       <span class="dg-policy-number">04</span>
       <span class="dg-policy-name">시스템 연동 안내</span>
       <span class="dg-policy-desc">배송 상태 수신과 알림톡 연동</span>
@@ -85,49 +85,49 @@ sidebar: false
   </div>
   <div class="dg-policy-grid">
     <a class="dg-policy-item" href="/policy/overview">
-      <svg class="dg-pi-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg>
+      <img class="dg-pi-ico" src="/brand/icons/policy-overview.webp" alt="서류 폴더" width="224" height="224" loading="lazy" decoding="async">
       <span class="dg-policy-number">01</span>
       <span class="dg-policy-name">운영정책 총칙 · 문서 안내</span>
       <span class="dg-policy-desc">적용 범위와 용어를 확인합니다</span>
     </a>
     <a class="dg-policy-item" href="/policy/inbound">
-      <svg class="dg-pi-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v8m0 0l-3-3m3 3l3-3"/><path d="M4 13v6a2 2 0 002 2h12a2 2 0 002-2v-6"/><path d="M4 13h16"/></svg>
+      <img class="dg-pi-ico" src="/brand/icons/policy-inbound.webp" alt="택배 상자" width="224" height="224" loading="lazy" decoding="async">
       <span class="dg-policy-number">02</span>
       <span class="dg-policy-name">입고 · 인수 정책</span>
       <span class="dg-policy-desc">인수 기준과 취급 상품을 확인합니다</span>
     </a>
     <a class="dg-policy-item" href="/policy/cutoff">
-      <svg class="dg-pi-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <img class="dg-pi-ico" src="/brand/icons/policy-cutoff.webp" alt="알람 시계" width="224" height="224" loading="lazy" decoding="async">
       <span class="dg-policy-number">03</span>
       <span class="dg-policy-name">주문 마감 · 출고 정책</span>
       <span class="dg-policy-desc">마감 시각과 주문 변경 기준을 확인합니다</span>
     </a>
     <a class="dg-policy-item" href="/policy/delivery">
-      <svg class="dg-pi-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h10v9H3z"/><path d="M13 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></svg>
+      <img class="dg-pi-ico" src="/brand/icons/policy-delivery.webp" alt="배송 트럭" width="224" height="224" loading="lazy" decoding="async">
       <span class="dg-policy-number">04</span>
       <span class="dg-policy-name">배송 기준</span>
       <span class="dg-policy-desc">배송 완료와 대응배송 기준을 확인합니다</span>
     </a>
     <a class="dg-policy-item" href="/policy/undelivered">
-      <svg class="dg-pi-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg>
+      <img class="dg-pi-ico" src="/brand/icons/policy-undelivered.webp" alt="경고 표지" width="224" height="224" loading="lazy" decoding="async">
       <span class="dg-policy-number">05</span>
       <span class="dg-policy-name">미배송 판정 · 처리 정책</span>
       <span class="dg-policy-desc">판정 기준과 처리 타임라인을 확인합니다</span>
     </a>
     <a class="dg-policy-item" href="/policy/returns">
-      <svg class="dg-pi-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 10-3 6.2"/><path d="M20 7v5h-5"/></svg>
+      <img class="dg-pi-ico" src="/brand/icons/policy-returns.webp" alt="회수 화살표" width="224" height="224" loading="lazy" decoding="async">
       <span class="dg-policy-number">06</span>
       <span class="dg-policy-name">반품 · 회수 정책</span>
       <span class="dg-policy-desc">반품 요청과 반송 기준을 확인합니다</span>
     </a>
     <a class="dg-policy-item" href="/policy/claims">
-      <svg class="dg-pi-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg>
+      <img class="dg-pi-ico" src="/brand/icons/policy-claims.webp" alt="방패" width="224" height="224" loading="lazy" decoding="async">
       <span class="dg-policy-number">07</span>
       <span class="dg-policy-name">클레임 · 배상 정책</span>
       <span class="dg-policy-desc">사고 유형별 대응과 보상을 확인합니다</span>
     </a>
     <a class="dg-policy-item" href="/policy/security">
-      <svg class="dg-pi-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13.5" r="3.5"/></svg>
+      <img class="dg-pi-ico" src="/brand/icons/policy-security.webp" alt="카메라" width="224" height="224" loading="lazy" decoding="async">
       <span class="dg-policy-number">08</span>
       <span class="dg-policy-name">증빙 · 기록 · 보존 정책</span>
       <span class="dg-policy-desc">증빙 기준과 보존 기간을 확인합니다</span>
