@@ -6,9 +6,9 @@ sidebar: false
 <section class="dg-hero">
   <div class="dg-hero-inner">
     <div>
-      <span class="dg-eyebrow">DELIRABBIT PARTNER GUIDE</span>
-      <h1>더 쉬운 배송 운영,<br><em>함께하는 모든 순간.</em></h1>
-      <p class="dg-hero-lead">첫 출고 준비부터 배송 이슈 해결까지.<br>화주사에 필요한 안내를 한곳에서 확인하세요.</p>
+      <span class="dg-eyebrow">DELIVUS · 딜리래빗</span>
+      <h1>화주사 가이드</h1>
+      <p class="dg-hero-lead">AI 기술 기반 당일 도착보장 배송, 딜리래빗의 운영 기준과 처리 절차를 한 곳에서 확인하세요.</p>
       <button class="dg-search" type="button" aria-label="가이드 검색 열기"
         onclick="var b=document.querySelector('.VPNavBarSearch button,.DocSearch-Button');if(b){b.click()}else{document.dispatchEvent(new KeyboardEvent('keydown',{key:'k',ctrlKey:true,bubbles:true}))}">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg>
@@ -22,7 +22,20 @@ sidebar: false
         <a href="/start/integration">시스템 연동</a>
       </p>
     </div>
-    <img class="dg-hero-art" src="/brand/hero-art.webp" alt="배송 상자와 위치 핀, 확인 배지 일러스트" width="560" height="560" fetchpriority="high" decoding="async">
+    <div class="dg-hero-figure" aria-hidden="true">
+      <img class="dg-hero-art" src="/brand/hero-art.webp" alt="" width="560" height="560" fetchpriority="high" decoding="async">
+      <span class="dg-pill dg-pill-a">
+        <i></i>
+        <span><b>차근차근, 첫 출고</b><em>함께 준비해요</em></span>
+      </span>
+      <span class="dg-pill dg-pill-b">
+        <i></i>
+        <span><b>고객에게 안전하게</b></span>
+      </span>
+      <span class="dg-dot dg-dot-1"></span>
+      <span class="dg-dot dg-dot-2"></span>
+      <span class="dg-dot dg-dot-3"></span>
+    </div>
   </div>
 </section>
 
@@ -70,6 +83,43 @@ sidebar: false
       </a>
     </div>
   </div>
+</section>
+
+<section class="dg-section dg-reveal">
+  <div class="dg-section-head">
+    <div>
+      <span class="dg-eyebrow">DELIVERY JOURNEY</span>
+      <h2>주문부터 수령까지, 이렇게 흘러갑니다</h2>
+      <p class="dg-section-desc">고객이 주문한 순간부터 문 앞에 닿기까지의 전체 여정입니다.</p>
+    </div>
+    <a class="dg-more" href="/start/process">프로세스 자세히 →</a>
+  </div>
+  <ol class="dg-journey">
+    <li>
+      <img src="/brand/journey/01-order.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+      <span class="dg-j-step">STEP 01</span>
+      <strong>주문 접수</strong>
+      <p>화주사 주문 데이터가 연동되고 수취인 주소·연락처·출입정보가 등록됩니다.</p>
+    </li>
+    <li>
+      <img src="/brand/journey/02-hub.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+      <span class="dg-j-step">STEP 02</span>
+      <strong>허브 분류</strong>
+      <p>물품 단위로 스캔·분류되어 배송 라우트에 배정되고, 배송 시작 알림톡이 발송됩니다.</p>
+    </li>
+    <li>
+      <img src="/brand/journey/03-deliver.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+      <span class="dg-j-step">STEP 03</span>
+      <strong>배송</strong>
+      <p>18시부터 배송 기사가 라우트에 따라 이동하며, 기본 배송 장소는 문 앞입니다.</p>
+    </li>
+    <li>
+      <img src="/brand/journey/04-receive.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+      <span class="dg-j-step">STEP 04</span>
+      <strong>고객 수령</strong>
+      <p>완료 사진을 등록하고 고객에게 배송 완료 알림톡이 자동 발송됩니다.</p>
+    </li>
+  </ol>
 </section>
 
 <section class="dg-section dg-reveal">
