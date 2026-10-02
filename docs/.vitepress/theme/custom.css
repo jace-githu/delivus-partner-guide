@@ -600,3 +600,33 @@ body:has(.dg-hero-photo) .VPNavBar .divider { display: none; }
 }
 .dg-hero-lead { max-width: 440px; }
 .dg-hero-photo .dg-title { text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45); }
+
+/* ---------- 레이아웃 폭 확장 ----------
+   VitePress 기본값은 레이아웃 1440px / 본문 688px이라 넓은 화면에서 양옆이 크게 빈다.
+   한글은 영문보다 글자당 폭이 좁아 본문을 넓혀도 가독성이 유지된다. */
+:root { --vp-layout-max-width: 1680px; }
+
+@media (min-width: 1280px) {
+  .VPDoc.has-aside .content-container { max-width: 860px; }
+  .VPDoc:not(.has-aside) .content-container { max-width: 980px; }
+  .VPSidebar { width: 300px; }
+  .VPDoc { padding-left: 24px; padding-right: 24px; }
+}
+@media (min-width: 1600px) {
+  .VPDoc.has-aside .content-container { max-width: 940px; }
+}
+
+/* 홈도 같은 비율로 */
+@media (min-width: 960px) {
+  .VPHome .vp-doc.container { max-width: 1560px; }
+}
+.dg-home { max-width: 1480px; }
+
+/* ---------- 히어로 패럴랙스 (스크롤 연동) ---------- */
+.dg-hero-photo::before {
+  transform: scale(1.14) translateY(var(--dg-parallax, 0px));
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .dg-hero-photo::before { transform: scale(1.04); }
+}

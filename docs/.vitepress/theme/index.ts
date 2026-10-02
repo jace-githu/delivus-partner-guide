@@ -36,8 +36,25 @@ export default {
       targets.forEach((t) => io.observe(t))
     }
 
+    // 히어로 패럴랙스: 스크롤에 따라 배경만 천천히 밀어준다
+    const parallax = () => {
+      const hero = document.querySelector<HTMLElement>('.dg-hero-photo')
+      if (!hero) return
+      let ticking = false
+      const update = () => {
+        const y = Math.min(window.scrollY, 700)
+        hero.style.setProperty('--dg-parallax', (y * 0.16).toFixed(1) + 'px')
+        ticking = false
+      }
+      const onScroll = () => {
+        if (!ticking) { ticking = true; requestAnimationFrame(update) }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true })
+      update()
+    }
+
     // 렌더링이 끝난 뒤에 실행해야 대상이 잡힌다
-    const schedule = () => window.setTimeout(setup, 80)
+    const schedule = () => window.setTimeout(() => { setup(); parallax() }, 80)
     router.onAfterRouteChange = schedule
     if (document.readyState === 'complete') schedule()
     else window.addEventListener('load', schedule, { once: true })
