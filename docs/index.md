@@ -85,42 +85,48 @@ sidebar: false
   </div>
 </section>
 
-<section class="dg-section dg-reveal">
-  <div class="dg-section-head">
-    <div>
-      <span class="dg-eyebrow">DELIVERY JOURNEY</span>
-      <h2>주문부터 수령까지, 이렇게 흘러갑니다</h2>
-      <p class="dg-section-desc">고객이 주문한 순간부터 문 앞에 닿기까지의 전체 여정입니다.</p>
-    </div>
-    <a class="dg-more" href="/start/process">프로세스 자세히 →</a>
+</div>
+
+<section class="dg-journey-band dg-reveal">
+  <video class="dg-journey-video" autoplay muted loop playsinline preload="metadata" poster="/brand/video/journey-poster.jpg" aria-hidden="true">
+    <source src="/brand/video/journey.webm" type="video/webm">
+    <source src="/brand/video/journey.mp4" type="video/mp4">
+  </video>
+  <div class="dg-journey-inner">
+    <span class="dg-eyebrow">DELIVERY JOURNEY</span>
+    <h2>주문부터 수령까지, 이렇게 흘러갑니다</h2>
+    <p class="dg-journey-lead">고객이 주문한 순간부터 문 앞에 닿기까지의 전체 여정입니다.</p>
+    <ol class="dg-journey">
+      <li class="is-on">
+        <img src="/brand/journey/01-order.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+        <span class="dg-j-step">STEP 01</span>
+        <strong>주문 접수</strong>
+        <p>화주사 주문 데이터가 연동되고 수취인 주소·연락처·출입정보가 등록됩니다.</p>
+      </li>
+      <li>
+        <img src="/brand/journey/02-hub.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+        <span class="dg-j-step">STEP 02</span>
+        <strong>허브 분류</strong>
+        <p>물품 단위로 스캔·분류되어 배송 라우트에 배정되고, 배송 시작 알림톡이 발송됩니다.</p>
+      </li>
+      <li>
+        <img src="/brand/journey/03-deliver.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+        <span class="dg-j-step">STEP 03</span>
+        <strong>배송</strong>
+        <p>18시부터 배송 기사가 라우트에 따라 이동하며, 기본 배송 장소는 문 앞입니다.</p>
+      </li>
+      <li>
+        <img src="/brand/journey/04-receive.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+        <span class="dg-j-step">STEP 04</span>
+        <strong>고객 수령</strong>
+        <p>완료 사진을 등록하고 고객에게 배송 완료 알림톡이 자동 발송됩니다.</p>
+      </li>
+    </ol>
+    <a class="dg-more dg-journey-link" href="/start/process">프로세스 자세히 →</a>
   </div>
-  <ol class="dg-journey">
-    <li>
-      <img src="/brand/journey/01-order.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
-      <span class="dg-j-step">STEP 01</span>
-      <strong>주문 접수</strong>
-      <p>화주사 주문 데이터가 연동되고 수취인 주소·연락처·출입정보가 등록됩니다.</p>
-    </li>
-    <li>
-      <img src="/brand/journey/02-hub.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
-      <span class="dg-j-step">STEP 02</span>
-      <strong>허브 분류</strong>
-      <p>물품 단위로 스캔·분류되어 배송 라우트에 배정되고, 배송 시작 알림톡이 발송됩니다.</p>
-    </li>
-    <li>
-      <img src="/brand/journey/03-deliver.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
-      <span class="dg-j-step">STEP 03</span>
-      <strong>배송</strong>
-      <p>18시부터 배송 기사가 라우트에 따라 이동하며, 기본 배송 장소는 문 앞입니다.</p>
-    </li>
-    <li>
-      <img src="/brand/journey/04-receive.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
-      <span class="dg-j-step">STEP 04</span>
-      <strong>고객 수령</strong>
-      <p>완료 사진을 등록하고 고객에게 배송 완료 알림톡이 자동 발송됩니다.</p>
-    </li>
-  </ol>
 </section>
+
+<div class="dg-home">
 
 <section class="dg-section dg-reveal">
   <div class="dg-section-head">
